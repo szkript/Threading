@@ -18,6 +18,8 @@ namespace SimpleThreadingDemo
             thread2.Start();
             thread1.Join();
             thread2.Join();
+            Thread.Sleep(10);
+
             Console.ReadLine();
         }
 
@@ -26,7 +28,6 @@ namespace SimpleThreadingDemo
             for (int i=1; i <= 10; i++)
             {
                 Console.WriteLine($"Count : {0}, Thread : {1}", i, Thread.CurrentThread.ManagedThreadId);
-                Thread.Sleep(10);
             }
         }
     }
